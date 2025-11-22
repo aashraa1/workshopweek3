@@ -13,7 +13,7 @@ public class questionscenario
 
         Scanner sc = new Scanner(System.in);
 
-        // Fixed rates (you can change these if your teacher gave different values)
+        // Fixed rates 
         double baseFare = 50;          // Rs. 50
         double perKm = 20;             // Rs. 20 per km
         double perMinute = 2;          // Rs. 2 per minute
@@ -33,7 +33,7 @@ public class questionscenario
         System.out.print("Is this night-time travel? (yes/no): ");
         String isNight = sc.next().toLowerCase();
 
-        // ----- CALCULATION -----
+        // CALCULATION 
         double fare = baseFare + (distance * perKm) + (minutes * perMinute);
 
         // Apply local discount
@@ -42,7 +42,7 @@ public class questionscenario
         // Apply night-time surcharge
         fare = isNight.equals("yes") ? fare * (1 + nightSurchargeRate) : fare;
 
-        // ----- OUTPUT -----
+        //  OUTPUT
         System.out.println("Total Fare: Rs. " + fare);
     }
 }
